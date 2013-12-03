@@ -9,10 +9,8 @@ else
 		origen=originbit
 	else
 		if [ "$2" == "" ]; then
-			origen=origin
-		else
-			echo "Parametros incorrectos"
-			return 0
+		echo "Parametros incorrectos"
+		exit 1
 		fi
 	fi
 fi
