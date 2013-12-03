@@ -8,9 +8,5 @@ else
 	if [ "$2" == "bitbucket" ]; then
 		origen=originbit
 	else
-		if [ "$2" == "" ]; then
-		echo "Parametros incorrectos"
-		exit 1
-		fi
 	fi
 fi
