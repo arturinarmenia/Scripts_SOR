@@ -1,12 +1,12 @@
 #!/bin/bash
 git add $1
 git commit -a -m "add $1"
-git push -u origen master
+git push $origen master
 if [ "$2" == "github" ]; then
-	$origen=origin
+	origen=origin
 else
 	if [ "$2" == "bitbucket" ]; then
-		$origen=originbit
+		origen=originbit
 	else
 	fi
 fi
