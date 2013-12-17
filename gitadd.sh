@@ -1,7 +1,6 @@
 #!/bin/bash
 git add $1
 git commit -a -m "add $1"
-git push $origen master
 if [ "$2" == "github" ]; then
 	origen=origin
 else
@@ -12,3 +11,4 @@ else
 		exit 1
 	fi
 fi
+git push -u $origen master
