@@ -8,5 +8,7 @@ else
 	if [ "$2" == "bitbucket" ]; then
 		origen=originbit
 	else
+		echo "introduce github o bitbucket"
+		exit 1
 	fi
 fi
