@@ -1,8 +1,10 @@
-#bin/bash!
+#!/bin/bash
 usuario=$1
-grupo=$(cat /etc/group | grep -P "^$usuario:" | cut -d ":" -f4 )
+idgrupo=$(cat /etc/passwd | grep -P "^$usuario:" | cut -d ":" -f4 )
+grupo=$(cat /etc/group | grep -P "$idgrupo" | cut -d ":" -f1)
+
 if [ "$grupo" == "" ]; then
- echo "Escriba un usuario correcto"
+	echo "Error"
 else
- echo "$grupo"
+	echo "$grupo"
 fi
